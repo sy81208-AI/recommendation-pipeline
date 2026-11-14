@@ -1,0 +1,15 @@
+{
+  "total_raw_interactions": 100015,
+  "valid_interactions": 100000,
+  "quarantined_invalid_interactions": 15,
+  "validation_pass_rate_pct": 99.99,
+  "error_breakdown": {
+    "DUPLICATE_RECORD": 2,
+    "INVALID_RATING": 3,
+    "MISSING_VALUE": 2,
+    "INVALID_DATA_TYPE": 3,
+    "INVALID_TIMESTAMP": 2,
+    "ORPHAN_USER_ID": 3,
+    "ORPHAN_ITEM_ID": 3
+  }
+}

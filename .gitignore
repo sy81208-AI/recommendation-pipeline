@@ -1,0 +1,7 @@
+(
+echo .venv/
+echo __pycache__/
+echo *.pyc
+echo mlflow.db
+echo mlruns/
+) > .gitignore

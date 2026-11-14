@@ -1,0 +1,38 @@
+project:
+  name: "DM4ML-Recommendation-Pipeline"
+  random_seed: 42
+
+paths:
+  raw_dir: "data/raw"
+  processed_dir: "data/processed"
+  features_dir: "data/features"
+  errors_dir: "data/errors"
+  models_dir: "models"
+  reports_dir: "reports"
+
+ingestion:
+  dataset_url: "https://files.grouplens.org/datasets/movielens/ml-100k.zip"
+  inject_audit_anomalies: true
+
+validation:
+  min_rating: 1.0
+  max_rating: 5.0
+  min_timestamp: "1995-01-01"
+  max_timestamp: "2026-12-31"
+
+preparation:
+  test_ratio: 0.20
+  min_user_interactions_for_split: 5
+
+features:
+  bayesian_prior_weight: 10.0
+
+training:
+  mlflow_experiment: "DM4ML_Recommendation_System"
+  mlflow_tracking_uri: "sqlite:///mlflow.db"
+  svd_components: 25
+  hybrid_svd_weight: 0.80
+
+evaluation:
+  top_k: 10
+  relevance_threshold: 4.0
